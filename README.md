@@ -7,4 +7,6 @@ Java,
 Python,
 HTML/CSS,
 Javascript,
-Mobile App Projects
+Mobile App Projects,
+MIPS Assembly Language,
+etc...
