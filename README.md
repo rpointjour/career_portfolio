@@ -9,4 +9,4 @@ HTML/CSS,
 Javascript,
 Mobile App Projects,
 MIPS Assembly Language,
-etc...
+etc..
