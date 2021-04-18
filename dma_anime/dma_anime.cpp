@@ -6,7 +6,7 @@
 #include <fstream>
 using namespace std;
 
-// Declare classes
+// Declare the classes
 class anime
 {
 	public:
