@@ -4,7 +4,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-typedef struct treeNode{	// Structure for Binary Tree
+typedef struct treeNode{	// Structure for the Binary Tree
 	
 	int data;
 	struct treeNode *left;
