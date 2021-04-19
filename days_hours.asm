@@ -5,7 +5,7 @@
 .data
 user_hours:	.asciiz "\nEnter number of hours: "
 days_hours:	.asciiz "\nThe time you entered is equivalent to  day(s) and  hour(s) "
-######## Code Segment ####################################################################
+######## Code Segment #####################################################################
 .text
 .globl main
 
