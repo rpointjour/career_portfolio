@@ -1,6 +1,6 @@
 # career_portfolio
 This repository contains my most impressive engineering projects.
-
+#
 C programming,
 C++ programming,
 Java,
@@ -9,4 +9,4 @@ HTML/CSS,
 Javascript,
 Mobile App Projects,
 MIPS Assembly Language,
-etc..
+# More Projects Are Still In Development
