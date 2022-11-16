@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MyStockAppPOC</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_bottom_nav">MainActivity</string>
+    <string name="title_search">Search</string>
+    <string name="title_favorites">Favorites</string>
+</resources>
