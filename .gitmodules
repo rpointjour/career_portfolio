@@ -1,6 +1,3 @@
-[submodule "digital_business_card"]
-	path = digital_business_card
-	url = https://github.com/rpointjour/digital_business_card
 [submodule "my_first_desktop_app"]
 	path = my_first_desktop_app
 	url = https://github.com/rpointjour/my_first_desktop_app.git
