@@ -2,3 +2,4 @@
 [submodule "digital_business_card"]
 	path = digital_business_card
 	url = https://github.com/rpointjour/digital_business_card.git
+	ignore = dirty
