@@ -8,7 +8,7 @@ Node.js Express App
 
 JavaScript Game
 
-Python Database
+**Python Database**
 
 ## Technologies To Be Utilized
 HTML 
