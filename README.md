@@ -27,4 +27,6 @@ C#
 
 Django
 
+SQLite
+
 MySQL
