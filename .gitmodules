@@ -4,3 +4,6 @@
 [submodule "django_tutorial"]
 	path = django_tutorial
 	url = https://github.com/rpointjour/django_tutorial.git
+[submodule "windows_forms_app"]
+	path = windows_forms_app
+	url = https://github.com/rpointjour/windows_forms_app.git
