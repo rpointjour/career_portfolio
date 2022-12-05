@@ -5,6 +5,21 @@
 This repository contains my most impressive engineering projects.
 
 
+<img src="https://user-images.githubusercontent.com/54840122/205526183-55ef543b-5bfb-4061-8b22-11a816042b43.JPG" alt="Digital Business Card"
+ style="width:50%;height:50%;">
+
+
+<img src="https://user-images.githubusercontent.com/54840122/205526240-e9aff389-024c-4691-ab87-80f03ba5f7f9.JPG" alt="Turtlebot3" style="width:50%;height:50%;">
+
+
+<img src="https://user-images.githubusercontent.com/54840122/205526338-05b898f9-fddf-4eb3-8417-139fbbe3247c.JPG" alt="Distance Reader"
+style="width:30%;height:30%;">
+
+
+
+<img src="https://user-images.githubusercontent.com/54840122/205526415-83856a12-2846-422e-9298-9aa175fa1ab7.JPG" alt="Stock App"
+style="width:30%;height:30%;">
+
 ## Technologies Utilized
 
 C 
@@ -30,3 +45,5 @@ MIPS Assembly Language
 ## More Projects Are Still In Development
 
 **Desktop Apps**
+
+**Python Database (Django)**
