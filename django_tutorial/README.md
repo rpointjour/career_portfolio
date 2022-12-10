@@ -1,6 +1,18 @@
+# Main Repository
+
+https://github.com/rpointjour/django_tutorial.git
+
 # Django Tutorial
 
 From W3 Schools: https://www.w3schools.com/django/index.php
+
+## Overview
+
+This tutorial provides a basis for **Back-End development** with **Python** using the Django framework.
+I also wanted to learn how to implement databases into my applications, so this tutorial was the perfect place to start.
+Django uses ORM (Object Relational Mapping) which makes it simplier to communicate with databases. 
+Together with **SQLite** and the DB Browser program I was able to successfully add, modify, 
+and delete records efficiently from a database table with changes appearing instantly from my apps.
 
 ## Django Project & App Development
 1. Create Virtual Environment
