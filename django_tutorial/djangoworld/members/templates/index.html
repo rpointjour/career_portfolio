@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="{% static 'members.css' %}">
+<title>Members</title>
+</head>
+<body class="members">
+<h1>Members</h1>
+<table border="1">
+{% for x in mymembers %}
+<tr>
+<td><a href="update/{{ x.id }}">{{ x.id }}</a></td> <!--Set link for each member for update-->
+<td>{{ x.firstname }}</td>
+<td>{{ x.lastname }}</td>
+<td><a href="delete/{{ x.id }}">delete</a></td> <!--Set id as the parameter-->
+</tr>
+{% endfor %}
+</table>
+
+<p>
+    <a href="add/">Add member</a>
+</p>
+</body>
+</html>

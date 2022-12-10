@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'members.css' %}">
+    <title>Add Members</title>
+</head>
+<body>
+    <h1>Add member</h1>
+
+    <form action="addrecord/" method="post">
+    {% csrf_token %} <!-- Django requires this to handle Cross Site Request Forgeries in forms where the method is POST -->
+    First Name:<br>
+    <input name="first">
+    <br><br>
+    Last Name:<br>
+    <input name="last">
+    <br><br>
+    <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

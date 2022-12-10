@@ -1,0 +1,1 @@
+var myfunction = () => alert('Static Django JavaScript Working!');

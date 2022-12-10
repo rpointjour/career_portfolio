@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+<title>Django Templates</title>
+</head>
+<body class="bg-secondary">
+    <div class="container-mt-3">
+    <header class=" mt-0 p-5 bg-danger rounded">
+    <h1 class="display-1 text-center text-light">Welcome to the Users App!</h1>
+    </header>
+    <br>
+
+    <div class="text-center">
+    <button class="btn btn-dark text-center"><a href="usertable/" class="btn text-light">Model</a></button>
+    </div>
+
+    <main class="mt-1 p-3 bg-primary rounded">
+        <p class="text-center h3">
+            {% filter capfirst|title %}
+            Here we will learn more about the Django Template Structure
+            {% endfilter %}
+            <ul class="list-group list-group-flush text-center rounded">
+                <li class="list-group-item list-group-item-action list-group-item-success"><a href="variables/" class="text-dark btn">Django Variables</a></li>
+                <li class="list-group-item list-group-item-action list-group-item-success "><a href="tags/" class="text-dark btn">Django Tags</a></li>
+                <li class="list-group-item list-group-item-action list-group-item-success "><a href="ifElse/" class="text-dark btn">Django If Else</a></li>
+                <li class="list-group-item list-group-item-action list-group-item-success"><a href="forloop/" class="text-dark btn">Django For Loop</a></li>
+                <li class="list-group-item list-group-item-action list-group-item-success"><a href="cycle/" class="text-dark btn">Django Cycle</a></li>
+                <li class="list-group-item list-group-item-action list-group-item-success"><a href="extends/" class="text-dark btn">Django Extends</a></li>
+                <li class="list-group-item list-group-item-action list-group-item-success"><a href="404/" class="text-dark btn">Django 404 Template</a></li>
+            </ul>
+        </p>
+    </main>
+    </div>
+</body>
+</html>
