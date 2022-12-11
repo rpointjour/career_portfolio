@@ -4,3 +4,6 @@
 [submodule "windows_forms_app"]
 	path = windows_forms_app
 	url = https://github.com/rpointjour/windows_forms_app.git
+[submodule "python_database"]
+	path = python_database
+	url = https://github.com/rpointjour/python_database.git
