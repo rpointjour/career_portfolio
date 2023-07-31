@@ -13,36 +13,26 @@ encryption, network security, and cybersecurity protocols to design and develop 
 
 # Skills & Experience
 
-ESP32 FreeRTOS
+Software
 
-Unreal Engine 5 Game
+Hardware
 
-Linux
+Programming Languages
 
-Android Studio Mobile Apps
+Web Development
 
-Flutter Mobile Apps (Iphone + Android)
+Mobile App Development
 
-Java Spring Boot App
+- **Current & Prvious Roles**:
+
+    - Computer Engineer & Integration Specialist
+    - Concierge Technical Support Specialist
+    - Business Mobility Technical Support
+    - Front End Developer - WordPress Intern
 
 
 # Projects
-HTML 
+Turtlebot3 Waffle Pi
 
-CSS 
+MSP430 & Arduino Uno
 
-JavaScript 
-
-React
-
-Visual Studio 
-
-C++
-
-C#
-
-Django
-
-SQLite
-
-MySQL
