@@ -1,9 +1,3 @@
-[submodule "my_first_desktop_app"]
-	path = my_first_desktop_app
-	url = https://github.com/rpointjour/my_first_desktop_app.git
-[submodule "windows_forms_app"]
-	path = windows_forms_app
-	url = https://github.com/rpointjour/windows_forms_app.git
 [submodule "python_databases"]
 	path = python_databases
 	url = https://github.com/rpointjour/python_databases.git

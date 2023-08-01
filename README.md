@@ -1,9 +1,5 @@
 # Projects Currently In Development
 
-**Windows Desktop App**
-
-**WinForms App**
-
 Node.js Express App
 
 JavaScript Game
