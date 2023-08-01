@@ -44,6 +44,4 @@ MIPS Assembly Language
 
 ## More Projects Are Still In Development
 
-**Desktop Apps**
-
 **Python Database (Django)**
