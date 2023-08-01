@@ -13,15 +13,51 @@ encryption, network security, and cybersecurity protocols to design and develop 
 
 # Skills & Experience
 
-Software
+- **Software**:
+    - Eclipse IDE
+    - Multisim
+    - Android Studio
+    - Visual Studio
+    - Visual Studio Code
+    - Microsoft Office
+    - Code Composer Studio
+    - SolidWorks
+    - AutoCAD
+    - Network Security
+    - Data Encryption
+    - Cybersecurity Protocols (AES)
+    - Git 
 
-Hardware
+- **Hardware**:
+    - MSP430-G2553
+    - ESP32
+    - Arduino
+    - Oscilloscope
+    - DC Power Supply
+    - Multimeter
 
-Programming Languages
+- **Programming Languages**:
+    - C
+    - C++
+    - Java
+    - Python
+    - HTML
+    - CSS
+    - JavaScript
+    - SQL
+    - MySQL
+ 
+- **Web Development**:
+    - React
+    - Django
+    - Node.js
+    - PHP
+    - JSON
+    - APIs
 
-Web Development
-
-Mobile App Development
+- **Mobile App Development**:
+    - Android Studio
+    - Flutter 
 
 - **Current & Prvious Roles**:
 
@@ -32,7 +68,6 @@ Mobile App Development
 
 
 # Projects
-Turtlebot3 Waffle Pi
-
-MSP430 & Arduino Uno
+- **Turtlebot3 Waffle Pi**
+- **MSP430 & Arduino Uno**
 
