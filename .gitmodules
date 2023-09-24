@@ -2,6 +2,3 @@
 	path = WordPress
 	url = https://github.com/rpointjour/front_end_development.git
 
-[submodule "Machine Learning AI"]
-	path = main
-	url = https://github.com/rpointjour/machine_learning_ai.git
