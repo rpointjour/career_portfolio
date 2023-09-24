@@ -1,1 +1,4 @@
+[submodule "WordPress"]
+	path = WordPress
+	url = https://github.com/rpointjour/front_end_development.git
 
