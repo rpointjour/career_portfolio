@@ -1,14 +1,15 @@
 # Projects Currently In Development
 
-Node.js Express App
 
-JavaScript Game
+**WordPress**
 
-**Python Database**
+**Python**
+
+**JavaScript**
+
+**Machine Learning/AI**
 
 ESP32 FreeRTOS
-
-Unreal Engine 5 Game
 
 Linux
 
@@ -18,6 +19,7 @@ Flutter Mobile Apps (Iphone + Android)
 
 Java Spring Boot App
 
+Node.js Express App
 
 ## Technologies To Be Utilized
 HTML 
@@ -28,14 +30,10 @@ JavaScript
 
 React
 
-Visual Studio 
-
 C++
 
 C#
 
 Django
 
-SQLite
-
-MySQL
+PyTorch
