@@ -30,6 +30,8 @@ Java
 
 Python
 
+Django
+
 HTML
 
 CSS
@@ -44,4 +46,10 @@ MIPS Assembly Language
 
 ## More Projects Are Still In Development
 
-**Python Database (Django)**
+**WordPress**
+
+**Python**
+
+**JavaScript**
+
+**Machine Learning/AI**
