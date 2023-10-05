@@ -22,32 +22,34 @@ style="width:30%;height:30%;">
 
 
 <img src="https://github.com/rpointjour/career_portfolio/assets/54840122/37534874-be52-4114-9e27-0d637815422d" alt="Personal Blog"
- style="width:50%;height:50%" />
+ style="width:70%;height:70%" />
 
 
 ## Technologies Utilized
 
-C 
+- C 
 
-C++ 
+- C++ 
 
-Java
+- Java
 
-Python
+- Python
 
-Django
+- Django
 
-HTML
+- HTML
 
-CSS
+- CSS
 
-Javascript
+- Javascript
 
-React
+- React
 
-Android Studio
+- WordPress
 
-MIPS Assembly Language
+- Android Studio
+
+- MIPS Assembly Language
 
 ## More Projects Are Still In Development
 
