@@ -46,10 +46,8 @@ MIPS Assembly Language
 
 ## More Projects Are Still In Development
 
-**WordPress**
-
 **Python**
 
-**JavaScript**
-
 **Machine Learning/AI**
+
+**JavaScript**
