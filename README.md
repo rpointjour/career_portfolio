@@ -1,13 +1,10 @@
 # Projects Currently In Development
 
-
-**WordPress**
-
 **Python**
 
-**JavaScript**
-
 **Machine Learning/AI**
+
+**JavaScript**
 
 ESP32 FreeRTOS
 

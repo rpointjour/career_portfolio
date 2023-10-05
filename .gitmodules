@@ -1,7 +1,3 @@
-[submodule "WordPress"]
-	path = WordPress
-	url = https://github.com/rpointjour/front_end_development.git
-
 [submodule "machine_learning_ai"]
 	path = machine_learning_ai
 	url = https://github.com/rpointjour/machine_learning_ai
