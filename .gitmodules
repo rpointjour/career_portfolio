@@ -1,1 +1,4 @@
 
+[submodule "ai_chatbot"]
+	path = ai_chatbot
+	url = https://github.com/rpointjour/ai_chatbot.git
