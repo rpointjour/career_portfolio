@@ -1,3 +1,6 @@
+# Main Repository
+https://github.com/rpointjour/ai_chatbot.git
+#
 # ChatRJP
 
 <img src="https://github.com/rpointjour/ai_chatbot/assets/54840122/6828c10e-6a14-41e2-933d-4183416745df" alt="Chatbot" style="width:70%;height:70%;" />
