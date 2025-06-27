@@ -61,6 +61,18 @@ style="width:30%;height:30%;">
 **Python**
 ✅
 
-**Machine Learning/AI**
+**Bluetooth Low Energy (BLE)**
+
+**Android**
+
+**iOS**
+
+**WatchOS**
 
 **JavaScript**
+
+**Angular JS**
+
+**Linux**
+
+**Machine Learning/AI**
