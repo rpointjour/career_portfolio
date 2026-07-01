@@ -1,36 +1,37 @@
-# Projects Currently In Development
+# Projects In Progress
 
-**Python**
+**IoT**
 
-**Machine Learning/AI**
+**Bluetooth Low Energy (BLE)**
 
-**JavaScript**
+Raspberry Pi
+#
+https://rjpdev-pi-launchpad.web.app/
+#
 
-ESP32 FreeRTOS
+CUDA
 
-Linux
+Machine Learning
+#
+https://rjpdev-machine-learningpad.web.app/
+#
 
-Android Studio Mobile Apps
+ESP32
+#
+https://rjpdev-esp32-launchpad.web.app/
+#
 
-Flutter Mobile Apps (Iphone + Android)
+STM32
+#
+https://rjpdev-stm32-launchpad.web.app/
+#
 
-Java Spring Boot App
+## Tech Stack
 
-Node.js Express App
+- Linux
 
-## Technologies To Be Utilized
-HTML 
+- Python
 
-CSS 
+- PyTorch
 
-JavaScript 
-
-React
-
-C++
-
-C#
-
-Django
-
-PyTorch
+- C++
