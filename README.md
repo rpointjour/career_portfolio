@@ -21,16 +21,13 @@ style="width:30%;height:30%;">
 style="width:30%;height:30%;">
 
 #
-<img src="https://github.com/rpointjour/career_portfolio/assets/54840122/37534874-be52-4114-9e27-0d637815422d" alt="Personal Blog"
- style="width:70%;height:70%" />
-#
 <img src="https://github.com/rpointjour/career_portfolio/assets/54840122/d02e8046-1027-4cc9-8858-afa0e7bf9fea" alt="ChatRJP"
  style="width:70%;height:70%" />
 
  <img src="https://github.com/rpointjour/career_portfolio/assets/54840122/084f112d-91b1-4721-bf63-d024dca2cd08" alt="Chatbot" style="width:70%;height:70%;" />
 
 #
-# Technologies Utilized
+# Tech Stack
 
 - C 
 
@@ -50,29 +47,16 @@ style="width:30%;height:30%;">
 
 - React
 
-- WordPress
-
 - Android Studio
 
 - MIPS Assembly Language
 
 ## More Projects Are Still In Development
 
-**Python**
-✅
+**IoT**
 
 **Bluetooth Low Energy (BLE)**
 
-**Android**
-
-**iOS**
-
-**WatchOS**
-
-**JavaScript**
-
-**Angular JS**
-
-**Linux**
+**CUDA**
 
 **Machine Learning/AI**
