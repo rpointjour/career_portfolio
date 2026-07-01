@@ -50,13 +50,13 @@ style="width:30%;height:30%;">
 - Android Studio
 
 - MIPS Assembly Language
+#
+## Projects in Progress
 
-## More Projects Are Still In Development
+- **IoT**
 
-**IoT**
+- **Bluetooth Low Energy (BLE)**
 
-**Bluetooth Low Energy (BLE)**
+- CUDA
 
-**CUDA**
-
-**Machine Learning/AI**
+- Machine Learning/AI
