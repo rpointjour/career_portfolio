@@ -1,5 +1,7 @@
 
-![rjp](https://user-images.githubusercontent.com/54840122/204175556-e6fb0177-7489-4f84-9bfd-f849320b1226.png)
+<img src="https://github.com/user-attachments/assets/c5d830e0-8c81-4580-9556-54d83b73a82c" alt="Image 20250317 211244"
+ style="width:25%;height:25%;"/>
+
 
 # Career Portfolio
 This repository contains my most impressive engineering projects.
@@ -13,11 +15,6 @@ This repository contains my most impressive engineering projects.
 
 #
 <img src="https://user-images.githubusercontent.com/54840122/205526338-05b898f9-fddf-4eb3-8417-139fbbe3247c.JPG" alt="Distance Reader"
-style="width:30%;height:30%;">
-
-
-#
-<img src="https://user-images.githubusercontent.com/54840122/205526415-83856a12-2846-422e-9298-9aa175fa1ab7.JPG" alt="Stock App"
 style="width:30%;height:30%;">
 
 #
