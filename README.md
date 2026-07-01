@@ -1,5 +1,5 @@
 # Certifications In Progress
 
-**CompTIA Security+**
+**Google IT Support**
 
-**AWS Cloud Practitioner**
+**Microsoft Fundamentals (AZ-900)**
