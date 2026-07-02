@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RjpDev Image Classifier</title>
+    <link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
+    <style>
+        :root {
+            --bg: #070c14;
+            --surface: rgba(64, 67, 70, 0.82);
+            --surface-raised: rgba(20, 42, 64, 0.9);
+            --border: #7aa0bc;
+            --accent: #38c8f0;
+            --accent-dim: rgba(56, 200, 240, 0.12);
+            --accent-glow: rgba(56, 200, 240, 0.4);
+            --text: #ddeaf5;
+            --text-muted: #7aa0bc;
+            --text-dim: #d8eaf8;
+            --mono: 'Consolas', 'SF Mono', 'Cascadia Code', monospace;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: var(--mono);
+            background: var(--bg);
+            background-image:
+                radial-gradient(circle at 20% 20%, rgba(56, 200, 240, 0.05) 0%, transparent 50%),
+                linear-gradient(rgba(56, 200, 240, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(56, 200, 240, 0.03) 1px, transparent 1px);
+            background-size: 100% 100%, 48px 48px, 48px 48px;
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 48px 16px 32px;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 500px;
+            background: var(--surface);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(148, 196, 240, 0.18);
+            border-top: 2px solid var(--accent);
+            border-radius: 6px;
+            box-shadow:
+                0 0 60px rgba(56, 200, 240, 0.08),
+                0 24px 64px rgba(0, 0, 0, 0.5),
+                inset 0 1px 0 rgba(200, 230, 255, 0.1),
+                inset 1px 0 0 rgba(200, 230, 255, 0.04);
+            overflow: hidden;
+        }
+
+        .card-header {
+            padding: 16px 20px;
+            border-bottom: 1px solid rgba(148, 196, 240, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(90deg, rgba(56, 200, 240, 0.05), rgba(56, 200, 240, 0.02));
+        }
+
+        .status-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--accent);
+            box-shadow: 0 0 8px var(--accent-glow);
+            flex-shrink: 0;
+            animation: blink 2.4s ease-in-out infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        .card-title {
+            font-size: 0.78rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--accent);
+            font-weight: 400;
+        }
+
+        .model-tag {
+            margin-left: auto;
+            font-size: 0.68rem;
+            color: var(--text-dim);
+            letter-spacing: 0.06em;
+        }
+
+        .card-body { padding: 20px; }
+
+        /* Preview */
+        .preview-wrap {
+            position: relative;
+            border: 1px solid var(--border);
+            border-radius: 3px;
+            overflow: hidden;
+            margin-bottom: 12px;
+            display: none;
+        }
+
+        #preview {
+            width: 100%;
+            display: block;
+            max-height: 260px;
+            object-fit: cover;
+        }
+
+        .scan-line {
+            position: absolute;
+            left: 0; right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent 0%, var(--accent) 50%, transparent 100%);
+            box-shadow: 0 0 14px var(--accent-glow);
+            top: 0;
+            display: none;
+            animation: scan 1.4s ease-in-out infinite;
+        }
+
+        @keyframes scan {
+            0%   { top: 0%; opacity: 0; }
+            8%   { opacity: 1; }
+            92%  { opacity: 1; }
+            100% { top: 100%; opacity: 0; }
+        }
+
+        .change-img {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            letter-spacing: 0.06em;
+            text-align: right;
+            margin-bottom: 12px;
+            cursor: pointer;
+            display: none;
+        }
+
+        .change-img:hover { color: var(--accent); }
+
+        /* Upload */
+        .upload-area {
+            border: 1px dashed var(--border);
+            border-radius: 3px;
+            padding: 36px 24px;
+            text-align: center;
+            cursor: pointer;
+            background: var(--surface-raised);
+            transition: border-color 0.2s, background 0.2s;
+            margin-bottom: 12px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .upload-area::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, transparent 50%, rgba(0, 212, 184, 0.03));
+            pointer-events: none;
+        }
+
+        .upload-area:hover {
+            border-color: rgba(0, 212, 184, 0.4);
+            background: rgba(0, 212, 184, 0.04);
+        }
+
+        .upload-area input { display: none; }
+
+        .upload-icon { color: var(--text-dim); margin-bottom: 10px; }
+
+        .upload-label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            letter-spacing: 0.06em;
+        }
+
+        .upload-label em {
+            font-style: normal;
+            color: var(--accent);
+        }
+
+        /* Button */
+        button {
+            width: 100%;
+            padding: 11px;
+            background: transparent;
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            border-radius: 3px;
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background 0.2s, box-shadow 0.2s;
+        }
+
+        button:hover:not(:disabled) {
+            background: var(--accent-dim);
+            box-shadow: 0 0 24px var(--accent-glow);
+        }
+
+        button:disabled {
+            color: var(--text-muted);
+            border-color: var(--text-muted);
+            cursor: not-allowed;
+            opacity: 0.4;
+        }
+
+        /* Error */
+        #error {
+            font-size: 0.75rem;
+            color: #f87171;
+            margin-top: 12px;
+            padding: 10px 12px;
+            border: 1px solid rgba(248, 113, 113, 0.25);
+            border-radius: 3px;
+            background: rgba(248, 113, 113, 0.04);
+            display: none;
+            letter-spacing: 0.04em;
+        }
+
+        /* Results */
+        #results {
+            margin-top: 20px;
+            display: none;
+        }
+
+        .results-header {
+            font-size: 0.66rem;
+            color: var(--text-dim);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 14px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .result-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 11px;
+            opacity: 0;
+            animation: slideIn 0.3s ease forwards;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-6px); }
+            to   { opacity: 1; transform: translateX(0); }
+        }
+
+        .label {
+            font-size: 0.75rem;
+            color: var(--text);
+            width: 150px;
+            flex-shrink: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            letter-spacing: 0.03em;
+        }
+
+        .result-row.top .label { color: var(--accent); }
+
+        .bar-wrap {
+            flex: 1;
+            height: 3px;
+            background: var(--surface-raised);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .bar {
+            height: 100%;
+            width: 0;
+            border-radius: 2px;
+            background: linear-gradient(90deg, var(--accent), rgba(0, 212, 184, 0.5));
+            box-shadow: 0 0 6px var(--accent-glow);
+            transition: width 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .result-row:not(.top) .bar {
+            background: linear-gradient(90deg, rgba(56, 200, 240, 0.3), rgba(56, 200, 240, 0.1));
+            box-shadow: none;
+        }
+
+        .pct {
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            width: 38px;
+            text-align: right;
+            font-variant-numeric: tabular-nums;
+            letter-spacing: 0.04em;
+        }
+
+        .result-row.top .pct { color: var(--accent); }
+
+        footer {
+            margin-top: 20px;
+            font-size: 0.68rem;
+            color: var(--text-dim);
+            letter-spacing: 0.08em;
+            text-align: center;
+        }
+
+        footer span { color: var(--text-muted); }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="card-header">
+            <div class="status-dot"></div>
+            <span class="card-title">Image Classifier</span>
+            <span class="model-tag">MobileNetV2 · ImageNet</span>
+        </div>
+        <div class="card-body">
+            <div class="preview-wrap" id="previewWrap">
+                <img id="preview" alt="Selected image" />
+                <div class="scan-line" id="scanLine"></div>
+            </div>
+            <div class="change-img" id="changeImg" onclick="resetUpload()">↩ change image</div>
+
+            <div class="upload-area" id="uploadArea" onclick="document.getElementById('file').click()">
+                <input type="file" id="file" accept="image/*" onchange="onFile(event)" />
+                <div class="upload-icon">
+                    <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                        <path d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5m-13.5-9L12 3m0 0 4.5 4.5M12 3v13.5"/>
+                    </svg>
+                </div>
+                <div class="upload-label"><em>Select image</em> to classify</div>
+            </div>
+
+            <button id="btn" onclick="classify()" disabled>Run Inference</button>
+            <div id="error"></div>
+
+            <div id="results">
+                <div class="results-header">
+                    <span>Classification output</span>
+                    <span>Confidence</span>
+                </div>
+                <div id="resultRows"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let selectedFile = null;
+
+        function onFile(e) {
+            selectedFile = e.target.files[0];
+            if (!selectedFile) return;
+            const preview = document.getElementById("preview");
+            preview.src = URL.createObjectURL(selectedFile);
+            document.getElementById("previewWrap").style.display = "block";
+            document.getElementById("uploadArea").style.display = "none";
+            document.getElementById("changeImg").style.display = "block";
+            document.getElementById("btn").disabled = false;
+            document.getElementById("results").style.display = "none";
+            document.getElementById("error").style.display = "none";
+        }
+
+        function resetUpload() {
+            selectedFile = null;
+            document.getElementById("file").value = "";
+            document.getElementById("previewWrap").style.display = "none";
+            document.getElementById("uploadArea").style.display = "block";
+            document.getElementById("changeImg").style.display = "none";
+            document.getElementById("btn").disabled = true;
+            document.getElementById("results").style.display = "none";
+            document.getElementById("error").style.display = "none";
+        }
+
+        async function classify() {
+            if (!selectedFile) return;
+            const btn = document.getElementById("btn");
+            const scanLine = document.getElementById("scanLine");
+
+            btn.disabled = true;
+            btn.textContent = "Processing...";
+            scanLine.style.display = "block";
+            document.getElementById("error").style.display = "none";
+            document.getElementById("results").style.display = "none";
+
+            const form = new FormData();
+            form.append("file", selectedFile);
+
+            try {
+                const res = await fetch("/predict", { method: "POST", body: form });
+                const data = await res.json();
+                if (data.error) throw new Error(data.error);
+
+                const container = document.getElementById("resultRows");
+                container.innerHTML = data.predictions.map((p, i) => {
+                    const pct = (p.confidence * 100).toFixed(1);
+                    const label = p.label.replace(/_/g, " ");
+                    const topClass = i === 0 ? " top" : "";
+                    return `
+                        <div class="result-row${topClass}" style="animation-delay:${i * 55}ms">
+                            <span class="label">${label}</span>
+                            <div class="bar-wrap"><div class="bar" data-pct="${pct}"></div></div>
+                            <span class="pct">${pct}%</span>
+                        </div>`;
+                }).join("");
+
+                document.getElementById("results").style.display = "block";
+
+                requestAnimationFrame(() => requestAnimationFrame(() => {
+                    document.querySelectorAll(".bar").forEach(bar => {
+                        bar.style.width = bar.dataset.pct + "%";
+                    });
+                }));
+
+            } catch (err) {
+                const el = document.getElementById("error");
+                el.textContent = "error: " + err.message;
+                el.style.display = "block";
+            } finally {
+                scanLine.style.display = "none";
+                btn.disabled = false;
+                btn.textContent = "Run Inference";
+            }
+        }
+    </script>
+    <footer>built &amp; designed by <span>Roody Pointjour</span></footer>
+</body>
+</html>

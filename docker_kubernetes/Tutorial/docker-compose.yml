@@ -1,0 +1,5 @@
+services:
+  welcome-to-docker:
+    image: docker/welcome-to-docker:latest
+    ports:
+      - "8088:80"
