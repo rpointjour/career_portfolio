@@ -36,6 +36,8 @@ docker build -t image-classifier .
 **Run the container:**
 ```bash
 docker run -p 5000:5000 --name image-classifier image-classifier
+# To run with template
+docker run -p 5000:5000 -v ${PWD}/templates:/app/templates -v ${PWD}/static:/app/static --name image-classifier image-classifier
 ```
 
 Open `http://localhost:5000` in your browser, upload an image, and hit **Run Inference**.
