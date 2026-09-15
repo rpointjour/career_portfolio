@@ -31,6 +31,8 @@ A containerized ML inference API built with Flask and MobileNetV2. Upload any im
 cd First_Docker_App
 docker build -t image-classifier .
 docker run -p 5000:5000 --name image-classifier image-classifier
+# To run the template
+docker run -p 5000:5000 -v ${PWD}/templates:/app/templates -v ${PWD}/static:/app/static --name image-classifier image-classifier
 ```
 
 Then open `http://localhost:5000` in your browser.
