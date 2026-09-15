@@ -22,14 +22,6 @@ This repository contains my most impressive engineering projects.
 <img src="https://user-images.githubusercontent.com/54840122/205526338-05b898f9-fddf-4eb3-8417-139fbbe3247c.JPG" alt="Distance Reader"
 style="width:30%;height:30%;">
 
-#
-- **AI Chatbot**
-
-<img src="https://github.com/rpointjour/career_portfolio/assets/54840122/d02e8046-1027-4cc9-8858-afa0e7bf9fea" alt="ChatRJP"
- style="width:70%;height:70%" />
-
- <img src="https://github.com/rpointjour/career_portfolio/assets/54840122/084f112d-91b1-4721-bf63-d024dca2cd08" alt="Chatbot" style="width:70%;height:70%;" />
-
  #
  - **Docker - Image Classifier App**
 
